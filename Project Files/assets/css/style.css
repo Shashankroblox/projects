@@ -1,18 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -32,9 +18,7 @@
   --light-gray: hsl(0, 0%, 80%);
   --white: hsl(0, 0%, 100%);
 
-  /**
-   * typography
-   */
+  /* fonts */
 
   --ff-chakra-petch: 'Chakra Petch', sans-serif;
   --ff-mulish: 'Mulish', sans-serif;
@@ -81,11 +65,61 @@
 
 
 
+.navbar {
+  display: flex;
+  gap: 20px;
+}
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+  }
 
+  .navbar.active {
+    display: flex;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle-btn.active .nav-toggle-icon {
+    background-color: #ff9800; /* example effect */
+  }
+}
+
+/* Default hidden for toggle icon (on larger screens) */
+.nav-toggle-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+}
+
+
+/* Reset */
 *,
 *::before,
 *::after {
@@ -144,9 +178,7 @@ body {
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+/* Reused */
 
 .container { padding-inline: 16px; }
 
@@ -310,11 +342,7 @@ body {
 
 
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-.header .btn { display: none; }
+/* header */
 
 .header {
   position: absolute;
