@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attendance"
+version = "0.1.0"
+description = "Face Recognition Attendance System"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "opencv-python",
+    "face-recognition",
+    "numpy",
+]
+
+[project.scripts]
+attendance = "attendance.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

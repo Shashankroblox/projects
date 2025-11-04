@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/attendance/__init__.py
+src/attendance/config.py
+src/attendance/main.py
+src/attendance/recognition.py
+src/attendance/storage.py
+src/attendance.egg-info/PKG-INFO
+src/attendance.egg-info/SOURCES.txt
+src/attendance.egg-info/dependency_links.txt
+src/attendance.egg-info/entry_points.txt
+src/attendance.egg-info/requires.txt
+src/attendance.egg-info/top_level.txt
